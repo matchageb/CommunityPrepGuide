@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-PH">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#173e35">
+	<meta name="description" content="A practical preparedness guide for Philippine households, with an emergency kit guide, evacuation reminders, and an interactive checklist.">
+	<title>Ready Together | Community Preparedness Guide</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="task3-style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+	<header class="site-header">
+		<a class="brand" href="#top" aria-label="Ready Together home">
+			<span class="brand-mark" aria-hidden="true">+</span>
+			<span>Ready <span class="brand-light">Together</span></span>
+		</a>
+		<nav aria-label="Main navigation">
+			<a href="#checklist">Checklist</a>
+			<a href="#kit">Emergency kit</a>
+			<a href="#evacuation">Evacuation</a>
+			<a href="#resources">Local guidance</a>
+		</nav>
+		<a class="header-link" href="#checklist">Make a plan <span aria-hidden="true">↗</span></a>
+	</header>
+
+	<main id="main">
+		<section class="hero" id="top" aria-labelledby="hero-title">
+			<img class="hero-photo" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=2200&q=85" alt="Neighbors spending time together outdoors">
+			<div class="hero-shade" aria-hidden="true"></div>
+			<div class="hero-content">
+				<p class="eyebrow">A guide for Philippine households</p>
+				<h1 id="hero-title">Ready at home.<br>Stronger as a <em>community.</em></h1>
+				<p class="hero-intro">Prepare for emergencies before they happen. Make a household plan, pack essentials, and agree on how your family and neighbours will stay connected.</p>
+				<a class="button button-light" href="#checklist">Build your readiness <span aria-hidden="true">↓</span></a>
+			</div>
+			<p class="hero-caption">Preparedness starts with people.</p>
+		</section>
+
+		<div class="urgent-note" role="note">
+			<span class="urgent-dot" aria-hidden="true"></span>
+			<p><strong>Immediate danger?</strong> Call 911 in the Philippines, where available, and follow instructions from your barangay or local DRRMO.</p>
+		</div>
+
+		<section class="checklist-section section-pad" id="checklist" aria-labelledby="checklist-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow eyebrow-green">Start with the essentials</p>
+					<h2 id="checklist-title">Your household checklist</h2>
+					<p class="section-intro">Prepared is a process, not a perfect kit. Take one step at a time.</p>
+				</div>
+				<div class="progress-panel">
+					<div class="progress-copy"><span>YOUR PROGRESS</span><span id="progress-label" aria-live="polite">0 of 6 steps complete</span></div>
+					<progress id="checklist-progress" max="6" value="0" aria-label="Checklist progress">0 of 6</progress>
+					<button class="reset-button" id="reset-checklist" type="button">Reset checklist</button>
+				</div>
+			</div>
+
+			<div class="checklist-grid">
+				<label class="check-item">
+					<input type="checkbox" id="step-water" data-check>
+					<span class="checkmark" aria-hidden="true"></span>
+					<span class="check-copy"><strong>Store water and food</strong><span>Set aside safe drinking water and ready-to-eat food for everyone at home.</span></span>
+					<span class="step-number">01</span>
+				</label>
+				<label class="check-item">
+					<input type="checkbox" id="step-supplies" data-check>
+					<span class="checkmark" aria-hidden="true"></span>
+					<span class="check-copy"><strong>Pack a go-bag</strong><span>Keep essential supplies in a bag you can carry if you need to leave quickly.</span></span>
+					<span class="step-number">02</span>
+				</label>
+				<label class="check-item">
+					<input type="checkbox" id="step-plan" data-check>
+					<span class="checkmark" aria-hidden="true"></span>
+					<span class="check-copy"><strong>Make a household plan</strong><span>Choose meeting places and agree on how to reconnect if you are separated.</span></span>
+					<span class="step-number">03</span>
+				</label>
+				<label class="check-item">
+					<input type="checkbox" id="step-contacts" data-check>
+					<span class="checkmark" aria-hidden="true"></span>
+					<span class="check-copy"><strong>Write down key contacts</strong><span>Keep family, barangay, and local DRRMO contacts on paper as well as on your phone.</span></span>
+					<span class="step-number">04</span>
+				</label>
+				<label class="check-item">
+					<input type="checkbox" id="step-alerts" data-check>
+					<span class="checkmark" aria-hidden="true"></span>
+					<span class="check-copy"><strong>Know where to get official updates</strong><span>Follow your local government and keep a battery-powered radio for power interruptions.</span></span>
+					<span class="step-number">05</span>
+				</label>
+				<label class="check-item">
+					<input type="checkbox" id="step-neighbors" data-check>
+					<span class="checkmark" aria-hidden="true"></span>
+					<span class="check-copy"><strong>Check in with a neighbour</strong><span>Agree how to check on children, older adults, persons with disabilities, and pets.</span></span>
+					<span class="step-number">06</span>
+				</label>
+			</div>
+			<p class="privacy-note">Your checklist stays in this browser on this device.</p>
+		</section>
+
+		<section class="prepare-section" id="prepare" aria-labelledby="prepare-title">
+			<div class="prepare-inner section-pad">
+				<div class="prepare-heading">
+					<p class="eyebrow eyebrow-green">Make it work for you</p>
+					<h2 id="prepare-title">A good plan fits<br>your people.</h2>
+					<p>Consider the hazards in your area and the people, routines, and support needs unique to your household.</p>
+				</div>
+				<div class="plan-list">
+					<article class="plan-row">
+						<span class="plan-index">A</span>
+						<div><h3>Plan for everyone</h3><p>Include children, older adults, persons with disabilities, people with medical needs, and pets.</p></div>
+					</article>
+					<article class="plan-row">
+						<span class="plan-index">B</span>
+						<div><h3>Know your local risks</h3><p>Ask your barangay about local hazards, safe routes, evacuation sites, and community warning signals.</p></div>
+					</article>
+					<article class="plan-row">
+						<span class="plan-index">C</span>
+						<div><h3>Practice and refresh</h3><p>Review your plan together, replace expired supplies, and update contacts when things change.</p></div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="kit-section section-pad" id="kit" aria-labelledby="kit-title">
+			<div class="kit-heading">
+				<div>
+					<p class="eyebrow eyebrow-green">Ready to carry</p>
+					<h2 id="kit-title">Build a household emergency kit</h2>
+				</div>
+				<p>Pack essentials in a waterproof, easy-to-carry bag. Keep it accessible, tailor it to your family, and check it regularly.</p>
+			</div>
+			<div class="kit-grid">
+				<article class="kit-card">
+					<span class="kit-number">01 / WATER &amp; FOOD</span>
+					<h3>Safe basics</h3>
+					<ul>
+						<li>Drinking water and ready-to-eat, non-perishable food</li>
+						<li>Manual can opener and reusable utensils</li>
+						<li>Water and food for each household member, including pets</li>
+					</ul>
+				</article>
+				<article class="kit-card">
+					<span class="kit-number">02 / HEALTH &amp; HYGIENE</span>
+					<h3>Personal needs</h3>
+					<ul>
+						<li>First-aid supplies and personal medicines</li>
+						<li>Prescription details, eyeglasses, and masks</li>
+						<li>Soap, alcohol-based hand rub, and basic sanitation items</li>
+					</ul>
+				</article>
+				<article class="kit-card">
+					<span class="kit-number">03 / LIGHT &amp; COMMUNICATION</span>
+					<h3>Stay connected</h3>
+					<ul>
+						<li>Flashlight, spare batteries, and a battery or hand-crank radio</li>
+						<li>Charged power bank, charging cable, and whistle</li>
+						<li>Written emergency contacts and a local area map</li>
+					</ul>
+				</article>
+				<article class="kit-card">
+					<span class="kit-number">04 / DOCUMENTS &amp; COMFORT</span>
+					<h3>Ready for your family</h3>
+					<ul>
+						<li>Copies of IDs and important records in a waterproof pouch</li>
+						<li>Small bills, a change of clothes, and basic personal items</li>
+						<li>Supplies for infants, older adults, disabilities, and pets</li>
+					</ul>
+				</article>
+			</div>
+			<p class="kit-note">Keep the bag light enough to carry. Follow your local DRRMO’s advice for the hazards in your area.</p>
+		</section>
+
+		<section class="evacuation-section" id="evacuation" aria-labelledby="evacuation-title">
+			<div class="evacuation-inner section-pad">
+				<div class="evacuation-heading">
+					<p class="eyebrow eyebrow-green">If you need to leave</p>
+					<h2 id="evacuation-title">Evacuate early.<br>Move safely.</h2>
+					<p>Know your route and evacuation centre before an emergency. During an event, follow instructions from local authorities.</p>
+				</div>
+				<ol class="evacuation-list">
+					<li><span>01</span><div><h3>Follow official directions</h3><p>Listen to your barangay or city/municipal DRRMO. Leave promptly when advised or ordered.</p></div></li>
+					<li><span>02</span><div><h3>Take your go-bag and use known routes</h3><p>Go to the designated evacuation centre. Do not walk or drive through floodwater or cross swollen rivers.</p></div></li>
+					<li><span>03</span><div><h3>Secure your home only if it is safe</h3><p>If time and conditions allow, switch off utilities as instructed, lock up, and tell someone where you are going.</p></div></li>
+					<li><span>04</span><div><h3>Wait for the all-clear</h3><p>Keep your household together at the centre. Do not return until local authorities say it is safe.</p></div></li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="resources-section section-pad" id="resources" aria-labelledby="resources-title">
+			<div class="resources-heading">
+				<div>
+					<p class="eyebrow eyebrow-green">Keep learning</p>
+					<h2 id="resources-title">Local guidance matters</h2>
+				</div>
+				<p>This page is for general education and does not provide live alerts. For current instructions, contact your barangay or local DRRMO.</p>
+			</div>
+			<div class="resource-links">
+				<a href="https://www.pagasa.dost.gov.ph/" target="_blank" rel="noopener noreferrer"><span>01</span><strong>PAGASA weather information</strong><span class="resource-arrow" aria-hidden="true">↗</span></a>
+				<a href="https://www.phivolcs.dost.gov.ph/" target="_blank" rel="noopener noreferrer"><span>02</span><strong>PHIVOLCS earthquake and volcano information</strong><span class="resource-arrow" aria-hidden="true">↗</span></a>
+				<a href="https://ndrrmc.gov.ph/" target="_blank" rel="noopener noreferrer"><span>03</span><strong>NDRRMC public information</strong><span class="resource-arrow" aria-hidden="true">↗</span></a>
+			</div>
+			<aside class="contact-note" aria-labelledby="contact-title">
+				<h3 id="contact-title">Write down your local contacts</h3>
+				<dl>
+					<div><dt>Barangay / BDRRMC</dt><dd>Keep the local contact number handy.</dd></div>
+					<div><dt>City or municipal DRRMO</dt><dd>Ask where to find official evacuation updates.</dd></div>
+					<div><dt>Nearest evacuation centre</dt><dd>Confirm the location and safest route in advance.</dd></div>
+				</dl>
+			</aside>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">+</span><span>Ready <span class="brand-light">Together</span></span></a>
+		<p>Look out for one another. Be ready together.</p>
+		<a href="#top" class="back-top">Back to top ↑</a>
+	</footer>
+</body>
+</html>
